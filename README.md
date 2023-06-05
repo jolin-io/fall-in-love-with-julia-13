@@ -1,15 +1,18 @@
 ![image](logo-fall-in-love-with-julia.png)
 
-# fall-in-love-with-julia
+# fall-in-love-with-julia 13: Accelerating Python with Julia
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://notebooks.gesis.org/binder/v2/gh/jolin-io/fall-in-love-with-julia-13/main)
 
 An introductory 101 series to get to know the power of Julialang.
 
-Author: Stephan Sahm, [Julia User Group Munich](https://www.meetup.com/Julia-User-Group-Munich/).
+**Author:** Stephan Sahm, [Julia User Group Munich](https://www.meetup.com/Julia-User-Group-Munich/).
 
-To open a specific notebook, go to it in github and press the "launch binder" button.
-![screenshot](assets/images/Screenshot_20230207_081343.png)
+**Outline:**
+- [01 first notebook shows how to use PyJulia](https://notebooks.gesis.org/binder/v2/gh/jolin-io/fall-in-love-with-julia-13/main?filepath=01%20Accelerating%20Python%20with%20PyJulia.ipynb)
+- [02 second notebook is about JuliaCall](https://notebooks.gesis.org/binder/v2/gh/jolin-io/fall-in-love-with-julia-13/main?filepath=02%20Accelerating%20Python%20with%20JuliaCall.ipynb)
+- [03 using Python from Julia with both PyCall and PythonCall](https://notebooks.gesis.org/binder/v2/gh/jolin-io/fall-in-love-with-julia-13/main?filepath=03%20Use%20Python%20with%20PyCall%20and%20PythonCall.ipynb)
+- [special extra - Julia vs C++](https://mybinder.org/v2/gh/jolin-io/workshop-accelerate-Python-with-Julia/main?filepath=03-example-cython-vs-cpp-vs-julia.ipynb)
 
 
 ## Why Julia?
