@@ -33,11 +33,9 @@ Here my favourite passage
 > Types in languages like Python simply don't provide enough information to the compiler for similar capabilities, so as soon as you used those languages as a Julia front-end you would be stuck.
 
 
-## Local installation
+## Local installation via Docker
 
-If [![Binder](https://mybinder.org/badge_logo.svg)](https://notebooks.gesis.org/binder/v2/gh/jolin-io/fall-in-love-with-julia-13/main) does not work for you, you can install the package locally. There are two options, using docker, or using plain julia.
-
-### Docker (recommended)
+If [![Binder](https://mybinder.org/badge_logo.svg)](https://notebooks.gesis.org/binder/v2/gh/jolin-io/fall-in-love-with-julia-13/main) does not work for you, you can install the package locally.
 
 This process is identical to how mybinder.org is actually doing it. Hence you will get the very same environment.
 
@@ -49,42 +47,12 @@ This process is identical to how mybinder.org is actually doing it. Hence you wi
     python3 -m pip install --user jupyter-repo2docker
     ```
 
-    If you do not have python, consider installing it via [Anaconda](https://www.anaconda.com/products/individual).
+    If you do not have python, consider installing it via [miniforge](https://github.com/conda-forge/miniforge).
 
 3. Execute repo2docker on this repository. It will take several 10 minutes to build everything.
 
     ```bash
-    jupyter-repo2docker https://github.com/jolin-io/fall-in-love-with-julia
+    jupyter-repo2docker https://github.com/jolin-io/fall-in-love-with-julia-13
     ```
 
     Usually, a browser is opened automatically for you, but if not, an url is also printed at the very end of the command output. Copy that one to your browser and you are ready to go.
-
-### No docker
-
-This process is installing dependencies tracked by Julia, which will suffice for 98% of the material here.
-
-1. Download and install Julia from https://julialang.org/downloads/
-
-2. Instantiate the fall-in-love-with-julia package
-
-    ```bash
-    ProjectFolder="$HOME/JuliaProjects"
-    mkdir -p "$ProjectFolder"
-    cd "$ProjectFolder"
-
-    git clone https://github.com/jolin-io/fall-in-love-with-julia
-    cd fall-in-love-with-julia
-    julia --project --eval 'import Pkg; Pkg.instantiate(); Pkg.add("IJulia")'
-    ```
-
-3. Run jupyter
-
-    Either use your favorite jupyter installation or run
-
-    ```bash
-    ProjectFolder="$HOME/JuliaProjects"
-    cd "$ProjectFolder"
-    julia --project --eval 'import IJulia; notebook()'
-    ```
-
-In case a specific example (e.g. the Streaming Kaggle example) does not work, you may need to install extra packages similar to those described in [apt.txt](./apt.txt) or execute further steps on the commandline similar to those described in [postBuild](./postBuild).
